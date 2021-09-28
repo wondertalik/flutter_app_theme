@@ -23,6 +23,8 @@ class DemoContent extends StatelessWidget {
             ComponentSpacer(),
             Progress(),
             ComponentSpacer(),
+            Chips(),
+            ComponentSpacer(),
             Texts(),
             ComponentSpacer(),
             TextFields(),

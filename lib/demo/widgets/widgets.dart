@@ -7,4 +7,5 @@ export 'options.dart';
 export 'progress.dart';
 export 'textfields.dart';
 export 'texts.dart';
+export 'chips.dart';
 export 'top_app_bar.dart';
