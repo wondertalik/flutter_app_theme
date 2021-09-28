@@ -36,11 +36,14 @@ class _BottomNavigationBarFixed extends StatelessWidget {
         BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Favorites'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.music_note), label: 'Music'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.local_activity), label: 'Place'),
+            BottomNavigationBarItem(icon: Icon(Icons.feed), label: 'News'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: 'Settings'),
           ],
         ),
       ],
@@ -65,11 +68,14 @@ class _BottomNavigationBarShifting extends StatelessWidget {
         BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Favorites'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.music_note), label: 'Music'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.local_activity), label: 'Place'),
+            BottomNavigationBarItem(icon: Icon(Icons.feed), label: 'News'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: 'Settings'),
           ],
         ),
       ],
