@@ -7,6 +7,7 @@ export 'fabs.dart';
 export 'header.dart';
 export 'options.dart';
 export 'progress.dart';
+export 'tabbars.dart';
 export 'textfields.dart';
 export 'texts.dart';
 export 'top_app_bar.dart';

@@ -6,30 +6,28 @@ class DemoContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final widgets = <Widget>[
+      const ColorSchemeWidget(),
+      const Buttons(),
+      const TopAppBar(),
+      const TabBars(),
+      const BottomNavigationBars(),
+      const Options(),
+      const Progress(),
+      const Chips(),
+      const Fabs(),
+      const Texts(),
+      const TextFields(),
+    ];
+
+    final items = <Widget>[];
+    for (final widget in widgets) {
+      items.addAll(<Widget>[const ComponentSpacer(), widget]);
+    }
+
     return Padding(
-      padding: const EdgeInsets.only(left: 8, right: 8, top: 16),
-      child: ListView(
-        children: const [
-          ColorSchemeWidget(),
-          ComponentSpacer(),
-          Buttons(),
-          ComponentSpacer(),
-          TopAppBar(),
-          ComponentSpacer(),
-          ComponentSpacer(),
-          Options(),
-          ComponentSpacer(),
-          Progress(),
-          ComponentSpacer(),
-          Chips(),
-          ComponentSpacer(),
-          Fabs(),
-          ComponentSpacer(),
-          Texts(),
-          ComponentSpacer(),
-          TextFields(),
-        ],
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: ListView(children: items),
     );
   }
 }
