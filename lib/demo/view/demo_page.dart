@@ -18,11 +18,6 @@ class DemoPage extends StatelessWidget {
       body: const SafeArea(
         child: DemoContent(),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
