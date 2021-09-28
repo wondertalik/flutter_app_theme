@@ -28,7 +28,7 @@ class Progress extends StatelessWidget {
               children: const [
                 Padding(
                   child: CircularProgressIndicator(),
-                  padding: EdgeInsets.only(right: 24.0),
+                  padding: EdgeInsets.only(right: 24.0, left: 4),
                 ),
                 Expanded(child: LinearProgressIndicator()),
               ],
