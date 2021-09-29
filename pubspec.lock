@@ -264,7 +264,7 @@ packages:
     source: hosted
     version: "1.0.0"
   mocktail:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: mocktail
       url: "https://pub.dartlang.org"
