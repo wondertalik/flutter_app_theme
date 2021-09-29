@@ -43,6 +43,7 @@ class DemoContent extends StatelessWidget {
                 BlocBuilder<DemoColorCubit, DemoColorState>(
                   builder: (context, state) {
                     return ActionChip(
+                      avatar: const Icon(Icons.expand_more),
                       label: Text(
                           'Color Scheme:  ${describeEnum(state.schemeVariant)}'),
                       onPressed: () {
