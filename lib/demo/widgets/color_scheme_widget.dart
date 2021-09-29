@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_theme/core/core.dart';
 import 'package:flutter_app_theme/demo/demo.dart';
-import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class ColorSchemeWidget extends StatelessWidget {
   const ColorSchemeWidget({
@@ -131,7 +131,7 @@ class ColorSchemeWidget extends StatelessWidget {
                 backgroundColor: Theme.of(context).colorScheme.onSecondary,
                 textColor: Theme.of(context).colorScheme.onPrimary,
                 onColorChanged: (color) {
-                  context.read<DemoColorCubit>().changeSecondaryColor(color);
+                  context.read<DemoColorCubit>().changeOnSecondaryColor(color);
                 },
               ),
             ],
@@ -146,7 +146,7 @@ class ColorSchemeWidget extends StatelessWidget {
                 backgroundColor: Theme.of(context).colorScheme.onBackground,
                 textColor: Theme.of(context).colorScheme.onPrimary,
                 onColorChanged: (color) {
-                  context.read<DemoColorCubit>().changeBackgroundColor(color);
+                  context.read<DemoColorCubit>().changeOnBackgroundColor(color);
                 },
               ),
               _ColorContainer(
