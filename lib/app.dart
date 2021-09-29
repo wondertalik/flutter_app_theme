@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_app_theme/demo/demo.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
   @override
-  _AppState createState() => _AppState();
+  State<App> createState() => _AppState();
 }
 
 class _AppState extends State<App> {
@@ -39,32 +41,20 @@ class _AppState extends State<App> {
           fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: 1.5),
     );
 
-    final ColorScheme colorScheme = ColorScheme.light(
-        // primary: Colors.red, // Color(0xFF3A009F),
-        // primaryVariant: Color(0xFF),
-        // secondary: Color(0xFF),
-        // secondaryVariant: Color(0xFF),
-        // surface: Color(0xFF),
-        // background: Color(0xFF),
-        // error: Color(0xFF),
-        // onPrimary: Color(0xFF),
-        // onSecondary: Color(0xFF),
-        // onSurface: Color(0xFF),
-        // onBackground: Color(0xFF),
-        // onError: Color(0xFF),
-        // brightness: Brightness.light,
+    return BlocBuilder<DemoColorCubit, DemoColorState>(
+      builder: (context, state) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: state.colorScheme,
+            textTheme: textTheme,
+            primaryTextTheme: textTheme,
+          ),
+          home: const DemoPage(
+            title: 'Flutter demo theme',
+          ),
         );
-
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: colorScheme,
-        textTheme: textTheme,
-        primaryTextTheme: textTheme,
-      ),
-      home: const DemoPage(
-        title: 'Flutter demo theme',
-      ),
+      },
     );
   }
 }
