@@ -149,7 +149,7 @@ class ColorSchemeContent extends StatelessWidget {
                     _ColorContainer(
                       title: 'Background',
                       orderNumber: 5,
-                      height: 80,
+                      height: 75,
                       width: thirdWidth,
                       backgroundColor: Theme.of(context).colorScheme.background,
                       textColor: Theme.of(context).colorScheme.onBackground,
@@ -162,7 +162,7 @@ class ColorSchemeContent extends StatelessWidget {
                     _ColorContainer(
                       title: 'Surface',
                       orderNumber: 6,
-                      height: 80,
+                      height: 75,
                       width: thirdWidth,
                       backgroundColor: Theme.of(context).colorScheme.surface,
                       textColor: Theme.of(context).colorScheme.onSurface,
@@ -175,7 +175,7 @@ class ColorSchemeContent extends StatelessWidget {
                     _ColorContainer(
                       title: 'Error',
                       orderNumber: 7,
-                      height: 80,
+                      height: 75,
                       width: thirdWidth,
                       backgroundColor: Theme.of(context).colorScheme.error,
                       textColor: Theme.of(context).colorScheme.onError,
@@ -191,7 +191,7 @@ class ColorSchemeContent extends StatelessWidget {
                   _ColorContainer(
                     title: 'OnPrimary',
                     orderNumber: 3,
-                    height: 80,
+                    height: 75,
                     width: halfWidth,
                     backgroundColor: Theme.of(context).colorScheme.onPrimary,
                     textColor: Theme.of(context).colorScheme.onSecondary,
@@ -204,7 +204,7 @@ class ColorSchemeContent extends StatelessWidget {
                   _ColorContainer(
                     title: 'OnSecondary',
                     orderNumber: 4,
-                    height: 80,
+                    height: 75,
                     width: halfWidth,
                     backgroundColor: Theme.of(context).colorScheme.onSecondary,
                     textColor: Theme.of(context).colorScheme.onPrimary,
@@ -221,7 +221,7 @@ class ColorSchemeContent extends StatelessWidget {
                   _ColorContainer(
                     title: 'OnBackground',
                     orderNumber: 5,
-                    height: 80,
+                    height: 75,
                     width: thirdWidth,
                     backgroundColor: Theme.of(context).colorScheme.onBackground,
                     textColor: Theme.of(context).colorScheme.onPrimary,
@@ -234,7 +234,7 @@ class ColorSchemeContent extends StatelessWidget {
                   _ColorContainer(
                     title: 'OnSurface',
                     orderNumber: 6,
-                    height: 80,
+                    height: 75,
                     width: thirdWidth,
                     backgroundColor: Theme.of(context).colorScheme.onSurface,
                     textColor: Theme.of(context).colorScheme.onPrimary,
@@ -247,7 +247,7 @@ class ColorSchemeContent extends StatelessWidget {
                   _ColorContainer(
                     title: 'OnError',
                     orderNumber: 7,
-                    height: 80,
+                    height: 75,
                     width: thirdWidth,
                     backgroundColor: Theme.of(context).colorScheme.onError,
                     textColor: Theme.of(context).colorScheme.onSecondary,
@@ -271,7 +271,7 @@ class _ColorContainer extends StatefulWidget {
     required this.title,
     required this.width,
     required this.orderNumber,
-    this.height = 110,
+    this.height = 95,
     required this.backgroundColor,
     required this.textColor,
     required this.onColorChanged,
