@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 part 'demo_color_state.dart';
 
 class DemoColorCubit extends Cubit<DemoColorState> {
-  DemoColorCubit() : super(const DemoColorState.light());
+  DemoColorCubit() : super(const DemoColorState.defaultScheme());
+
+  void changeDefaultScheme() {
+    emit(const DemoColorState.defaultScheme());
+  }
 
   void changeToLight() {
     emit(const DemoColorState.light());
@@ -24,84 +28,84 @@ class DemoColorCubit extends Cubit<DemoColorState> {
 
   void changePrimaryColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(primary: color),
+      colorScheme: state.colorScheme?.copyWith(primary: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changePrimaryVariantColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(primaryVariant: color),
+      colorScheme: state.colorScheme?.copyWith(primaryVariant: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeSecondaryColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(secondary: color),
+      colorScheme: state.colorScheme?.copyWith(secondary: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeSecondaryVariantColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(secondaryVariant: color),
+      colorScheme: state.colorScheme?.copyWith(secondaryVariant: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeBackgroundColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(background: color),
+      colorScheme: state.colorScheme?.copyWith(background: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeSurfaceColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(surface: color),
+      colorScheme: state.colorScheme?.copyWith(surface: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeErrorColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(error: color),
+      colorScheme: state.colorScheme?.copyWith(error: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeOnPrimaryColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(onPrimary: color),
+      colorScheme: state.colorScheme?.copyWith(onPrimary: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeOnSecondaryColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(onSecondary: color),
+      colorScheme: state.colorScheme?.copyWith(onSecondary: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeOnBackgroundColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(onBackground: color),
+      colorScheme: state.colorScheme?.copyWith(onBackground: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeOnSurfaceColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(onSurface: color),
+      colorScheme: state.colorScheme?.copyWith(onSurface: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }
 
   void changeOnErrorColor(Color color) {
     emit(state.copyWith(
-      colorScheme: state.colorScheme.copyWith(onError: color),
+      colorScheme: state.colorScheme?.copyWith(onError: color),
       schemeVariant: ColorSchemeVariant.custom,
     ));
   }

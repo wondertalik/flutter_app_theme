@@ -2,11 +2,17 @@ part of 'demo_color_cubit.dart';
 
 class DemoColorState extends Equatable {
   const DemoColorState({
-    this.colorScheme = const ColorScheme.light(),
-    this.schemeVariant = ColorSchemeVariant.light,
+    this.colorScheme,
+    this.schemeVariant = ColorSchemeVariant.defaultScheme,
   });
 
-  const DemoColorState.light() : this();
+  const DemoColorState.defaultScheme() : this();
+
+  const DemoColorState.light()
+      : this(
+          colorScheme: const ColorScheme.light(),
+          schemeVariant: ColorSchemeVariant.light,
+        );
 
   const DemoColorState.dark()
       : this(
@@ -36,17 +42,18 @@ class DemoColorState extends Equatable {
     );
   }
 
-  final ColorScheme colorScheme;
+  final ColorScheme? colorScheme;
   final ColorSchemeVariant schemeVariant;
 
   @override
-  List<Object> get props => [colorScheme];
+  List<Object?> get props => [colorScheme];
 }
 
 enum ColorSchemeVariant {
+  defaultScheme,
   light,
   dark,
   highContrastLight,
   highContrastDark,
-  custom
+  custom,
 }

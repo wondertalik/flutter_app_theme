@@ -48,8 +48,8 @@ class _AppState extends State<App> {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: state.colorScheme,
-            textTheme: textTheme,
-            primaryTextTheme: textTheme,
+            // textTheme: textTheme,
+            // primaryTextTheme: textTheme,
           ),
           home: const DemoPage(
             title: 'Flutter demo theme',
