@@ -6,7 +6,11 @@ class DemoColorState extends Equatable {
     this.schemeVariant = ColorSchemeVariant.defaultScheme,
   });
 
-  const DemoColorState.defaultScheme() : this();
+  DemoColorState._({
+    this.schemeVariant = ColorSchemeVariant.defaultScheme,
+  }) : colorScheme = ThemeData().colorScheme;
+
+  DemoColorState.defaultScheme() : this._();
 
   const DemoColorState.light()
       : this(

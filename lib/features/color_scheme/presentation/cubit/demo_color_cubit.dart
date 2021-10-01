@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 part 'demo_color_state.dart';
 
 class DemoColorCubit extends Cubit<DemoColorState> {
-  DemoColorCubit() : super(const DemoColorState.defaultScheme());
+  DemoColorCubit() : super(DemoColorState.defaultScheme());
 
   void changeDefaultScheme() {
-    emit(const DemoColorState.defaultScheme());
+    emit(DemoColorState.defaultScheme());
   }
 
   void changeToLight() {

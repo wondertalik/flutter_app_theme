@@ -10,7 +10,6 @@ class DemoContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final widgets = <Widget>[
-      // const ColorSchemeWidget(),
       const Buttons(),
       const TopAppBar(),
       const TabBars(),
@@ -45,7 +44,7 @@ class DemoContent extends StatelessWidget {
                     return ActionChip(
                       avatar: const Icon(Icons.expand_more),
                       label: Text(
-                          'Color Scheme:  ${describeEnum(state.schemeVariant)}'),
+                          'Color Scheme:  ${describeEnum(state.schemeVariant).replaceAll('Scheme', '')}'),
                       onPressed: () {
                         Navigator.of(context).push(ColorSchemePage.route());
                       },

@@ -32,21 +32,22 @@ class ColorSchemeContent extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InputChip(
-                        label: Text(
-                            describeEnum(ColorSchemeVariant.defaultScheme)),
+                        label: Text(describeEnum(ColorSchemeVariant.custom)),
                         selected: demoColorCubit.state.schemeVariant ==
-                            ColorSchemeVariant.defaultScheme,
-                        onSelected: (value) {
-                          demoColorCubit.changeDefaultScheme();
-                        },
+                            ColorSchemeVariant.custom,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InputChip(
-                        label: Text(describeEnum(ColorSchemeVariant.custom)),
+                        label: Text(
+                            describeEnum(ColorSchemeVariant.defaultScheme)
+                                .replaceAll('Scheme', '')),
                         selected: demoColorCubit.state.schemeVariant ==
-                            ColorSchemeVariant.custom,
+                            ColorSchemeVariant.defaultScheme,
+                        onSelected: (value) {
+                          demoColorCubit.changeDefaultScheme();
+                        },
                       ),
                     ),
                     Padding(
@@ -308,37 +309,35 @@ class _ColorContainerState extends State<_ColorContainer> {
   Widget build(BuildContext context) {
     currentColor = widget.backgroundColor;
     return InkWell(
-      onTap: context.read<DemoColorCubit>().state.colorScheme != null
-          ? () {
-              showModalBottomSheet(
-                  context: context,
-                  builder: (context) {
-                    return LayoutBuilder(
-                      builder: (context, constraints) => SingleChildScrollView(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: ColorPicker(
-                            pickerColor: currentColor,
-                            onColorChanged: (color) {
-                              widget.onColorChanged(color);
-                            },
-                            colorPickerWidth: constraints.maxWidth - 50,
-                            pickerAreaHeightPercent: 0.5,
-                            enableAlpha: true,
-                            displayThumbColor: true,
-                            showLabel: true,
-                            paletteType: PaletteType.hsv,
-                            pickerAreaBorderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(2.0),
-                              topRight: Radius.circular(2.0),
-                            ),
-                          ),
-                        ),
+      onTap: () {
+        showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return LayoutBuilder(
+                builder: (context, constraints) => SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ColorPicker(
+                      pickerColor: currentColor,
+                      onColorChanged: (color) {
+                        widget.onColorChanged(color);
+                      },
+                      colorPickerWidth: constraints.maxWidth - 50,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: true,
+                      displayThumbColor: true,
+                      showLabel: true,
+                      paletteType: PaletteType.hsv,
+                      pickerAreaBorderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(2.0),
+                        topRight: Radius.circular(2.0),
                       ),
-                    );
-                  });
-            }
-          : null,
+                    ),
+                  ),
+                ),
+              );
+            });
+      },
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(width: 0.2, color: Colors.grey.shade500),
