@@ -48,8 +48,10 @@ class DemoContent extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 8.0),
                         child: ActionChip(
                           avatar: const Icon(Icons.expand_more),
-                          label: Text(
-                              'Color Scheme:  ${describeEnum(state.schemeVariant).replaceAll('Scheme', '')}'),
+                          label: Text(state.schemeVariant !=
+                                  ColorSchemeVariant.defaultScheme
+                              ? 'Color Scheme: ${describeEnum(state.schemeVariant)}'
+                              : 'Color Scheme'),
                           onPressed: () {
                             Navigator.of(context).push(ColorSchemePage.route());
                           },
