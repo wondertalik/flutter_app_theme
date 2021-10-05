@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_theme/demo/demo.dart';
+import 'package:flutter_app_theme/features/components/components.dart';
 
 class Progress extends StatelessWidget {
   const Progress({
