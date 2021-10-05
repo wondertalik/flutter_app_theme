@@ -12,9 +12,6 @@ class ToggleThemeCubit extends Cubit<ToggleThemeState> {
   }
 
   void changeToggleableActiveColor(Color toggleableActiveColor) {
-    emit(state.copyWith(
-      toggleableActiveColor: toggleableActiveColor,
-      themeVariant: ToggleThemeVariant.custom,
-    ));
+    emit(ToggleThemeState.custom(toggleableActiveColor));
   }
 }
