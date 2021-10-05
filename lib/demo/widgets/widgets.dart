@@ -3,7 +3,6 @@ export 'buttons.dart';
 export 'chips.dart';
 export 'component_spacer.dart';
 export 'fabs.dart';
-export 'header.dart';
 export 'options.dart';
 export 'progress.dart';
 export 'tabbars.dart';

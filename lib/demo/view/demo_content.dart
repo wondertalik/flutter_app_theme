@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_theme/demo/demo.dart';
 import 'package:flutter_app_theme/features/color_scheme/color_scheme.dart';
+import 'package:flutter_app_theme/features/toggle_theme/toggle_theme.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DemoContent extends StatelessWidget {
@@ -37,21 +38,38 @@ class DemoContent extends StatelessWidget {
         children: [
           SizedBox(
             height: 70,
-            child: Row(
-              children: [
-                BlocBuilder<ColorSchemeCubit, ColorSchemeState>(
-                  builder: (context, state) {
-                    return ActionChip(
-                      avatar: const Icon(Icons.expand_more),
-                      label: Text(
-                          'Color Scheme:  ${describeEnum(state.schemeVariant).replaceAll('Scheme', '')}'),
-                      onPressed: () {
-                        Navigator.of(context).push(ColorSchemePage.route());
-                      },
-                    );
-                  },
-                ),
-              ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  BlocBuilder<ColorSchemeCubit, ColorSchemeState>(
+                    builder: (context, state) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: ActionChip(
+                          avatar: const Icon(Icons.expand_more),
+                          label: Text(
+                              'Color Scheme:  ${describeEnum(state.schemeVariant).replaceAll('Scheme', '')}'),
+                          onPressed: () {
+                            Navigator.of(context).push(ColorSchemePage.route());
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                  BlocBuilder<ToggleThemeCubit, ToggleThemeState>(
+                    builder: (context, state) {
+                      return ActionChip(
+                        avatar: const Icon(Icons.expand_more),
+                        label: const Text('Toggle theme'),
+                        onPressed: () {
+                          Navigator.of(context).push(ToggleThemePage.route());
+                        },
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(
