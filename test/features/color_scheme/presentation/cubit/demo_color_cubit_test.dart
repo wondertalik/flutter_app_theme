@@ -8,7 +8,7 @@ void main() {
       final demoColorCubit = ColorSchemeCubit();
 
       // assert
-      expect(demoColorCubit.state, const ColorSchemeState.light());
+      expect(demoColorCubit.state, ColorSchemeState.defaultScheme());
     });
   });
 }

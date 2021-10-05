@@ -3,16 +3,22 @@ part of 'toggle_theme_cubit.dart';
 enum ToggleThemeVariant { defaultTheme, custom }
 
 class ToggleThemeState extends Equatable {
-  const ToggleThemeState({
+  const ToggleThemeState._({
     this.toggleableActiveColor,
     this.themeVariant = ToggleThemeVariant.custom,
   });
 
-  ToggleThemeState._({
-    this.themeVariant = ToggleThemeVariant.defaultTheme,
-  }) : toggleableActiveColor = ThemeData().toggleableActiveColor;
+  ToggleThemeState.defaultTheme()
+      : this._(
+          toggleableActiveColor: ThemeData().toggleableActiveColor,
+          themeVariant: ToggleThemeVariant.custom,
+        );
 
-  ToggleThemeState.defaultTheme() : this._();
+  const ToggleThemeState.custom(Color toggleableActiveColor)
+      : this._(
+          toggleableActiveColor: toggleableActiveColor,
+          themeVariant: ToggleThemeVariant.custom,
+        );
 
   final Color? toggleableActiveColor;
   final ToggleThemeVariant themeVariant;
@@ -21,7 +27,7 @@ class ToggleThemeState extends Equatable {
     Color? toggleableActiveColor,
     ToggleThemeVariant? themeVariant,
   }) {
-    return ToggleThemeState(
+    return ToggleThemeState._(
       toggleableActiveColor:
           toggleableActiveColor ?? this.toggleableActiveColor,
       themeVariant: themeVariant ?? this.themeVariant,
