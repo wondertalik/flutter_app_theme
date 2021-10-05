@@ -1,29 +1,29 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-part 'demo_color_state.dart';
+part 'color_scheme_state.dart';
 
-class DemoColorCubit extends Cubit<DemoColorState> {
-  DemoColorCubit() : super(DemoColorState.defaultScheme());
+class ColorSchemeCubit extends Cubit<ColorSchemeState> {
+  ColorSchemeCubit() : super(ColorSchemeState.defaultScheme());
 
   void changeDefaultScheme() {
-    emit(DemoColorState.defaultScheme());
+    emit(ColorSchemeState.defaultScheme());
   }
 
   void changeToLight() {
-    emit(const DemoColorState.light());
+    emit(const ColorSchemeState.light());
   }
 
   void changeToDark() {
-    emit(const DemoColorState.dark());
+    emit(const ColorSchemeState.dark());
   }
 
   void changeToHighContrastLight() {
-    emit(const DemoColorState.highContrastLight());
+    emit(const ColorSchemeState.highContrastLight());
   }
 
   void changeToHighContrastDark() {
-    emit(const DemoColorState.highContrastDark());
+    emit(const ColorSchemeState.highContrastDark());
   }
 
   void changePrimaryColor(Color color) {

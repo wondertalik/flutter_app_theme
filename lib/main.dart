@@ -7,7 +7,7 @@ void main() {
   runApp(
     MultiBlocProvider(
       providers: [
-        BlocProvider<DemoColorCubit>(create: (_) => DemoColorCubit()),
+        BlocProvider<ColorSchemeCubit>(create: (_) => ColorSchemeCubit()),
       ],
       child: const App(),
     ),
