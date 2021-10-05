@@ -7,7 +7,14 @@ part 'toggle_theme_state.dart';
 class ToggleThemeCubit extends Cubit<ToggleThemeState> {
   ToggleThemeCubit() : super(ToggleThemeState.defaultTheme());
 
+  void changeToDefaultTheme() {
+    emit(ToggleThemeState.defaultTheme());
+  }
+
   void changeToggleableActiveColor(Color toggleableActiveColor) {
-    emit(state.copyWith(toggleableActiveColor: toggleableActiveColor));
+    emit(state.copyWith(
+      toggleableActiveColor: toggleableActiveColor,
+      themeVariant: ToggleThemeVariant.custom,
+    ));
   }
 }
