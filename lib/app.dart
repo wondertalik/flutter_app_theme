@@ -42,20 +42,16 @@ class _AppState extends State<App> {
           fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: 1.5),
     );
 
-    return BlocBuilder<DemoColorCubit, DemoColorState>(
-      builder: (context, state) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: state.colorScheme,
-            // textTheme: textTheme,
-            // primaryTextTheme: textTheme,
-          ),
-          home: const DemoPage(
-            title: 'Flutter demo theme',
-          ),
-        );
-      },
+    final colorSchemeState = context.watch<ColorSchemeCubit>().state;
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: colorSchemeState.colorScheme,
+      ),
+      home: const DemoPage(
+        title: 'Flutter theme',
+      ),
     );
   }
 }

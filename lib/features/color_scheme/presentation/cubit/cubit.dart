@@ -1,1 +1,1 @@
-export 'demo_color_cubit.dart';
+export 'color_scheme_cubit.dart';

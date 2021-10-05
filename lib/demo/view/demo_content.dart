@@ -39,7 +39,7 @@ class DemoContent extends StatelessWidget {
             height: 70,
             child: Row(
               children: [
-                BlocBuilder<DemoColorCubit, DemoColorState>(
+                BlocBuilder<ColorSchemeCubit, ColorSchemeState>(
                   builder: (context, state) {
                     return ActionChip(
                       avatar: const Icon(Icons.expand_more),

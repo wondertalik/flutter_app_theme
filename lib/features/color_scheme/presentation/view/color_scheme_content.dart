@@ -13,7 +13,7 @@ class ColorSchemeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final demoColorCubit = context.read<DemoColorCubit>();
+    final demoColorCubit = context.read<ColorSchemeCubit>();
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: LayoutBuilder(builder: (context, constraints) {
@@ -120,7 +120,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onPrimary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changePrimaryVariantColor(color);
                     },
                   ),
@@ -136,7 +136,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onSecondary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeSecondaryColor(color);
                     },
                   ),
@@ -149,7 +149,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onSecondary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeSecondaryVariantColor(color);
                     },
                   ),
@@ -168,7 +168,7 @@ class ColorSchemeContent extends StatelessWidget {
                       textColor: Theme.of(context).colorScheme.onBackground,
                       onColorChanged: (color) {
                         context
-                            .read<DemoColorCubit>()
+                            .read<ColorSchemeCubit>()
                             .changeBackgroundColor(color);
                       },
                     ),
@@ -181,7 +181,7 @@ class ColorSchemeContent extends StatelessWidget {
                       textColor: Theme.of(context).colorScheme.onSurface,
                       onColorChanged: (color) {
                         context
-                            .read<DemoColorCubit>()
+                            .read<ColorSchemeCubit>()
                             .changeSurfaceColor(color);
                       },
                     ),
@@ -210,7 +210,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onSecondary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeOnPrimaryColor(color);
                     },
                   ),
@@ -223,7 +223,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onPrimary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeOnSecondaryColor(color);
                     },
                   ),
@@ -240,7 +240,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onPrimary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeOnBackgroundColor(color);
                     },
                   ),
@@ -253,7 +253,7 @@ class ColorSchemeContent extends StatelessWidget {
                     textColor: Theme.of(context).colorScheme.onPrimary,
                     onColorChanged: (color) {
                       context
-                          .read<DemoColorCubit>()
+                          .read<ColorSchemeCubit>()
                           .changeOnSurfaceColor(color);
                     },
                   ),

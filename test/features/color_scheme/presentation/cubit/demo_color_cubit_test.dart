@@ -5,10 +5,10 @@ void main() {
   group('DemoColorCubit', () {
     test('initial state is DemoColorCubit.light', () async {
       // arrange
-      final demoColorCubit = DemoColorCubit();
+      final demoColorCubit = ColorSchemeCubit();
 
       // assert
-      expect(demoColorCubit.state, const DemoColorState.light());
+      expect(demoColorCubit.state, const ColorSchemeState.light());
     });
   });
 }

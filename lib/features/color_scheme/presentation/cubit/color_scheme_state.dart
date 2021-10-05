@@ -1,46 +1,46 @@
-part of 'demo_color_cubit.dart';
+part of 'color_scheme_cubit.dart';
 
-class DemoColorState extends Equatable {
-  const DemoColorState({
+class ColorSchemeState extends Equatable {
+  const ColorSchemeState({
     this.colorScheme,
     this.schemeVariant = ColorSchemeVariant.defaultScheme,
   });
 
-  DemoColorState._({
+  ColorSchemeState._({
     this.schemeVariant = ColorSchemeVariant.defaultScheme,
   }) : colorScheme = ThemeData().colorScheme;
 
-  DemoColorState.defaultScheme() : this._();
+  ColorSchemeState.defaultScheme() : this._();
 
-  const DemoColorState.light()
+  const ColorSchemeState.light()
       : this(
           colorScheme: const ColorScheme.light(),
           schemeVariant: ColorSchemeVariant.light,
         );
 
-  const DemoColorState.dark()
+  const ColorSchemeState.dark()
       : this(
           colorScheme: const ColorScheme.dark(),
           schemeVariant: ColorSchemeVariant.dark,
         );
 
-  const DemoColorState.highContrastLight()
+  const ColorSchemeState.highContrastLight()
       : this(
           colorScheme: const ColorScheme.highContrastLight(),
           schemeVariant: ColorSchemeVariant.highContrastLight,
         );
 
-  const DemoColorState.highContrastDark()
+  const ColorSchemeState.highContrastDark()
       : this(
           colorScheme: const ColorScheme.highContrastDark(),
           schemeVariant: ColorSchemeVariant.highContrastDark,
         );
 
-  DemoColorState copyWith({
+  ColorSchemeState copyWith({
     ColorScheme? colorScheme,
     ColorSchemeVariant? schemeVariant,
   }) {
-    return DemoColorState(
+    return ColorSchemeState(
       colorScheme: colorScheme ?? this.colorScheme,
       schemeVariant: schemeVariant ?? this.schemeVariant,
     );
