@@ -16,16 +16,19 @@ class Fabs extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             FloatingActionButton.extended(
+              heroTag: 'extended',
               icon: const Icon(Icons.edit),
               label: Text('Edit'.toUpperCase()),
               onPressed: () {},
             ),
             FloatingActionButton(
+              heroTag: 'mini',
               mini: true,
               child: const Icon(Icons.add),
               onPressed: () {},
             ),
             FloatingActionButton(
+              heroTag: 'normal',
               child: const Icon(Icons.favorite),
               onPressed: () {},
             ),
