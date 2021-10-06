@@ -5,7 +5,7 @@ class ToggleThemePage extends StatelessWidget {
   const ToggleThemePage({Key? key}) : super(key: key);
 
   static Route route() {
-    return PageRouteBuilder(
+    return PageRouteBuilder<ToggleThemePage>(
       pageBuilder: (context, animation, secondaryAnimation) =>
           const ToggleThemePage(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
@@ -31,6 +31,7 @@ class ToggleThemePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          key: const ValueKey('toogleThemePage_close'),
           onPressed: () {
             Navigator.of(context).pop();
           },
